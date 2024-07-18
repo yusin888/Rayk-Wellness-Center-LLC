@@ -1,113 +1,212 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen bg-white font-[Manrope,_Noto_Sans,_sans-serif]">
+      {/* Header */}
+      <header className="border-b border-solid border-b-[#f0f2f4]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between whitespace-nowrap py-3">
+            <div className="flex items-center gap-4 text-[#111517]">
+              <div className="size-4">{/* SVG logo */}</div>
+              <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">
+                Rayk Wellness Center LLC
+              </h2>
+            </div>
+            <div className="flex flex-1 justify-end gap-8">
+              <nav className="hidden md:flex items-center gap-9">
+                {[
+                  { text: "Call (651) 374-1620", href: "tel:+16513741620" },
+                  { text: "Referral Forms", href: "/referral-forms" },
+                  { text: "Careers", href: "/careers" },
+                  { text: "Message Us", href: "/contact" },
+                  { text: "Home", href: "/" },
+                  { text: "Services", href: "/services" },
+                ].map((item) => (
+                  <Link
+                    key={item.text}
+                    href={item.href}
+                    className="text-[#111517] text-sm font-medium leading-normal"
+                  >
+                    {item.text}
+                  </Link>
+                ))}
+              </nav>
+              <div className="flex gap-2">{/* Search and Globe buttons */}</div>
+              <div
+                className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style={{
+                  backgroundImage:
+                    'url("https://cdn.usegalileo.ai/sdxl10/4f31e2da-6d16-446c-bfcb-cc62f804d13e.png")',
+                }}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Hero Section - Full Width */}
+      <section
+        className="w-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("/images/img1.png")',
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+          paddingTop: "45%", // This creates a 4:3 aspect ratio
+        }}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col gap-6 items-start justify-end">
+              <div className="flex flex-col gap-2 text-left">
+                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl">
+                  Welcome to Rayk Wellness Center
+                </h1>
+                <h2 className="text-white text-sm font-normal leading-normal sm:text-base max-w-2xl">
+                  We offer Adult Rehabilitative Mental Health Services (ARMHS)
+                  that are designed to help you improve your mental health and
+                  wellness. Our goal is to help you reach your full potential
+                  and be as independent as possible. We provide services to
+                  individuals who are eligible for Medical Assistance (MA) and
+                  who have a mental illness diagnosis.
+                </h2>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#2c90e2] text-white text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
+                  <span className="truncate">Learn More</span>
+                </button>
+                <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#f0f2f4] text-[#111517] text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
+                  <span className="truncate">Referral Forms</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* ARMHS Section */}
+      <section className="bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-[#111517] text-3xl font-bold leading-tight tracking-[-0.033em] sm:text-4xl">
+                What are ARMHS?
+              </h2>
+              <p className="text-[#111517] text-base font-normal leading-normal">
+                Here are some of the most frequently asked questions about ARMHS
+                and how they can help you or a loved one improve their mental
+                health and wellness.
+              </p>
+            </div>
+            <h3 className="text-[#111517] text-2xl font-bold leading-tight tracking-[-0.015em] mt-8 mb-4">
+              What is ARMHS?
+            </h3>
+            <p className="text-[#111517] text-base font-normal leading-normal">
+              Adult Rehabilitative Mental Health Services (ARMHS) are a set of
+              services that help people with mental illness live more
+              independently. These services are provided by mental health
+              practitioners and include things like skill-building and support
+              for daily living. The goal of ARMHS is to help individuals with
+              mental illness develop the skills they need to live a fulfilling
+              and productive life.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Services Grid */}
+      <section className="bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                image:
+                  "https://cdn.usegalileo.ai/stability/0d2d607a-f638-4304-a253-e9629e913a7a.png",
+                title: "Our Team",
+                description:
+                  "Our team of mental health practitioners are dedicated to helping individuals with mental illness live more independently and improve their overall quality of life.",
+              },
+              {
+                image:
+                  "https://cdn.usegalileo.ai/sdxl10/a083baec-6309-4af0-8bab-55b8e04101b7.png",
+                title: "Our Locations",
+                description:
+                  "We provide ARMHS services to individuals living in the Twin Cities Metro Area, Central Minnesota, and Southern Minnesota. We also offer services to individuals living in select counties in Wisconsin.",
+              },
+              {
+                image:
+                  "https://cdn.usegalileo.ai/stability/660f8eda-722c-44ba-a0c5-9e51dcea8632.png",
+                title: "Our Mission",
+                description:
+                  "Our mission is to help individuals with mental illness reach their full potential and live a fulfilling and independent life.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col gap-3">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style={{ backgroundImage: `url("${item.image}")` }}
+                />
+                <div>
+                  <h3 className="text-[#111517] text-lg font-medium leading-normal mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#647787] text-sm font-normal leading-normal">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      {/* Footer Section */}
+      <footer className="bg-[#f0f2f4] text-[#111517]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+              <h2 className="text-lg font-bold mb-4">Rayk Wellness Center LLC</h2>
+              <p className="text-sm mb-4">
+                Providing Adult Rehabilitative Mental Health Services (ARMHS) to help improve mental health and wellness.
+              </p>
+              <div className="flex space-x-4">
+                {/* Social media icons */}
+                {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
+                  <a key={social} href={`#${social}`} className="text-[#2c90e2] hover:text-[#111517]">
+                    <span className="sr-only">{social}</span>
+                    <div className="w-6 h-6 bg-[#2c90e2]"></div> {/* Placeholder for social icons */}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                {['Home', 'Services', 'Referral Forms', 'Careers', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-sm hover:text-[#2c90e2]">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold mb-4">Contact Us</h3>
+              <ul className="space-y-2 text-sm">
+                <li>123 Main Street, City, State 12345</li>
+                <li>Phone: (651) 374-1620</li>
+                <li>Email: info@raykwellness.com</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-200 mt-8 pt-8 text-sm text-center">
+            <p>&copy; {new Date().getFullYear()} Rayk Wellness Center LLC. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
