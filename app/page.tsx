@@ -123,21 +123,24 @@ export default function Home() {
             {[
               {
                 image:
-                  "https://cdn.usegalileo.ai/stability/0d2d607a-f638-4304-a253-e9629e913a7a.png",
+                  "images/img2.png",
+                  // "https://cdn.usegalileo.ai/stability/0d2d607a-f638-4304-a253-e9629e913a7a.png",
                 title: "Our Team",
                 description:
                   "Our team of mental health practitioners are dedicated to helping individuals with mental illness live more independently and improve their overall quality of life.",
               },
               {
                 image:
-                  "https://cdn.usegalileo.ai/sdxl10/a083baec-6309-4af0-8bab-55b8e04101b7.png",
+                  "images/img3.png",
+                  // "https://cdn.usegalileo.ai/sdxl10/a083baec-6309-4af0-8bab-55b8e04101b7.png",
                 title: "Our Locations",
                 description:
                   "We provide ARMHS services to individuals living in the Twin Cities Metro Area, Central Minnesota, and Southern Minnesota. We also offer services to individuals living in select counties in Wisconsin.",
               },
               {
                 image:
-                  "https://cdn.usegalileo.ai/stability/660f8eda-722c-44ba-a0c5-9e51dcea8632.png",
+                  "images/img4.png",
+                  // "https://cdn.usegalileo.ai/stability/660f8eda-722c-44ba-a0c5-9e51dcea8632.png",
                 title: "Our Mission",
                 description:
                   "Our mission is to help individuals with mental illness reach their full potential and live a fulfilling and independent life.",
@@ -162,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer Section */}
+      {/* Footer */}
       <footer className="bg-[#f0f2f4] text-[#111517]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -173,12 +176,29 @@ export default function Home() {
               </p>
               <div className="flex space-x-4">
                 {/* Social media icons */}
-                {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
-                  <a key={social} href={`#${social}`} className="text-[#2c90e2] hover:text-[#111517]">
-                    <span className="sr-only">{social}</span>
-                    <div className="w-6 h-6 bg-[#2c90e2]"></div> {/* Placeholder for social icons */}
-                  </a>
-                ))}
+                <a href="#facebook" className="text-[#2c90e2] hover:text-[#111517]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="#twitter" className="text-[#2c90e2] hover:text-[#111517]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                  </svg>
+                </a>
+                <a href="#instagram" className="text-[#2c90e2] hover:text-[#111517]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="#linkedin" className="text-[#2c90e2] hover:text-[#111517]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
               </div>
             </div>
             <div>
@@ -208,5 +228,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    
   );
 }
