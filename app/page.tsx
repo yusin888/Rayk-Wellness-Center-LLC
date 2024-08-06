@@ -37,9 +37,11 @@ export default function Home() {
                 </h2>
               </div>
               <div className="flex flex-wrap gap-3">
+                <Link href="/services">
                 <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#2c90e2] text-white text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
                   <span className="truncate">Learn More</span>
                 </button>
+                </Link>
                 <a download href="/Canvas-Health-ARMHS-Program-Referral-Form.docx">
 
                 <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#f0f2f4] text-[#111517] text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">

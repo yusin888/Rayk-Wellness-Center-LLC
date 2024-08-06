@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Search, Globe, PhoneCall } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, Search, PhoneCall } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,10 +34,15 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#2c90e2] rounded-full"></div>
+            <Link href="/" className="flex items-center gap-3">
+              <Image 
+                src="/images/logo1.png"
+                alt="Rayk Wellness Logo"
+                width={64}
+                height={53}
+              />
               <h2 className={`text-xl font-bold leading-tight ${isScrolled ? 'text-[#111517]' : 'text-white'}`}>
-                Rayk Wellness
+                Rayk Wellness Center
               </h2>
             </Link>
           </div>
@@ -61,9 +67,6 @@ const Header: React.FC = () => {
             <button className={`p-2 rounded-full ${isScrolled ? 'text-[#111517] hover:bg-gray-100' : 'text-white hover:bg-white/20'} transition-colors`}>
               <Search size={20} />
             </button>
-            {/* <button className={`p-2 rounded-full ${isScrolled ? 'text-[#111517] hover:bg-gray-100' : 'text-white hover:bg-white/20'} transition-colors`}>
-              <Globe size={20} />
-            </button> */}
             <button
               className="md:hidden p-2 rounded-full text-[#111517] hover:bg-gray-100 transition-colors"
               onClick={toggleMenu}
