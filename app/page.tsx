@@ -38,15 +38,14 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link href="/services">
-                <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#2c90e2] text-white text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
-                  <span className="truncate">Learn More</span>
-                </button>
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#2c90e2] text-white text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
+                    <span className="truncate">Learn More</span>
+                  </button>
                 </Link>
-                <a download href="/Canvas-Health-ARMHS-Program-Referral-Form.docx">
-
-                <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#f0f2f4] text-[#111517] text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
-                  <span className="truncate">Referral Forms</span>
-                </button>
+                <a download href="/Rayk-Wellness-Center-ARMHS-Program-Referral-Form.docx">
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 sm:h-12 sm:px-5 bg-[#f0f2f4] text-[#111517] text-sm font-bold leading-normal tracking-[0.015em] sm:text-base">
+                    <span className="truncate">Referral Forms</span>
+                  </button>
                 </a>
               </div>
             </div>
@@ -100,6 +99,7 @@ export default function Home() {
                 title: "Our Locations",
                 description:
                   "We provide ARMHS services to individuals living in the Twin Cities Metro Area, Central Minnesota, and Southern Minnesota. We also offer services to individuals living in select counties in Wisconsin.",
+                link: "https://www.google.com/maps/search/?api=1&query=8685+Magnolia+Trail,+Eden+Prairie,+MN,+55344"
               },
               {
                 image: "images/img4.png",
@@ -109,18 +109,37 @@ export default function Home() {
               },
             ].map((item, index) => (
               <div key={index} className="flex flex-col gap-3">
-                <div
-                  className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style={{ backgroundImage: `url("${item.image}")` }}
-                />
-                <div>
-                  <h3 className="text-[#111517] text-lg font-medium leading-normal mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#647787] text-sm font-normal leading-normal">
-                    {item.description}
-                  </p>
-                </div>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="group">
+                    <div
+                      className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105"
+                      style={{ backgroundImage: `url("${item.image}")` }}
+                    />
+                    <div>
+                      <h3 className="text-[#111517] text-lg font-medium leading-normal mb-2 group-hover:text-[#2c90e2] transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-[#647787] text-sm font-normal leading-normal group-hover:text-[#111517] transition-colors duration-300">
+                        {item.description}
+                      </p>
+                    </div>
+                  </a>
+                ) : (
+                  <>
+                    <div
+                      className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                      style={{ backgroundImage: `url("${item.image}")` }}
+                    />
+                    <div>
+                      <h3 className="text-[#111517] text-lg font-medium leading-normal mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-[#647787] text-sm font-normal leading-normal">
+                        {item.description}
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>

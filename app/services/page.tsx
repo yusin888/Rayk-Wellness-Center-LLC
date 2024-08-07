@@ -7,13 +7,19 @@ import Header from './../../components/Header';
 import Footer from './../../components/Footer';
 
 const services: string[] = [
-  "We help clients set goals and make decisions about their treatment plans",
-  "We provide holistic support and guidance to clients while respecting their autonomy",
-  "We help clients develop crisis prevention and intervention plans to address potential crises",
-  "We assist clients in identifying coping strategies and support systems for difficult times",
-  "We help coordinate emergency response services for clients by connecting them to relevant authorities",
-  "We maintain accurate and confidential records of client assessment and interventions",
-  "We monitor significant changes in client's mental health or well-being and report to appropriate authorities"
+  "Managing and coping with mental health symptoms",
+  "Healthy lifestyle skills and practices",
+  "Preventing relapse and sobriety management",
+  "Cooking and nutritional skills",
+  "Engaging in meaningful activities",
+  "Interpersonal communication",
+  "Identifying and accessing benefits and resources",
+  "Employment-related tasks",
+  "Crisis assistance",
+  "Medication education",
+  "Assist in overcoming barriers to accessing resources",
+  "Provide support for individuals in creating a community for themselves",
+  "Explore appropriate healthcare options with individuals"
 ];
 
 interface ServiceCardProps {
@@ -69,7 +75,8 @@ const ServicesPage: React.FC = () => {
             className="mt-16 text-center"
           >
             <a
-              href="/contact"
+              download
+              href="/Rayk-Wellness-Center-ARMHS-Program-Referral-Form.docx"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-300"
             >
               Get Started

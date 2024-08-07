@@ -62,7 +62,7 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-4">
             <a href="tel:+16513741620" className={`hidden sm:flex items-center gap-2 ${isScrolled ? 'text-[#111517]' : 'text-white'} hover:text-[#2c90e2] transition-colors`}>
               <PhoneCall size={18} />
-              <span className="text-sm font-medium">(651) 374-1620</span>
+              <span className="text-sm font-medium">(763) 439-1742</span>
             </a>
             <button className={`p-2 rounded-full ${isScrolled ? 'text-[#111517] hover:bg-gray-100' : 'text-white hover:bg-white/20'} transition-colors`}>
               <Search size={20} />
