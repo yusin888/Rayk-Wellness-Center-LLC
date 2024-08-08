@@ -6,7 +6,7 @@ import Footer from './../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white font-[Manrope,_Noto_Sans,_sans-serif]">
+    <div className="min-h-screen bg-white font-['Inter',_'Helvetica_Neue',_'Arial',_sans-serif]">
       <Header />
 
       {/* Hero Section - Full Width */}
@@ -24,7 +24,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-6 items-start justify-end">
               <div className="flex flex-col gap-2 text-left">
-                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl">
+                <h1 className="text-white text-4xl font-bold leading-tight tracking-[-0.033em] sm:text-5xl">
                   Welcome to Rayk Wellness Center
                 </h1>
                 <h2 className="text-white text-sm font-normal leading-normal sm:text-base max-w-2xl">
@@ -59,26 +59,50 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col gap-4">
               <h2 className="text-[#111517] text-3xl font-bold leading-tight tracking-[-0.033em] sm:text-4xl">
-                What are ARMHS?
+                What are Adult Rehabilitative Mental Health Services (ARMHS)?
               </h2>
               <p className="text-[#111517] text-base font-normal leading-normal">
-                Here are some of the most frequently asked questions about ARMHS
-                and how they can help you or a loved one improve their mental
-                health and wellness.
+                ARMHS are mental health services that are rehabilitative and designed to help individuals with mental illness develop and enhance their psychiatric stability, social competencies, personal and emotional adjustment, and independent living and community skills. These services also enable individuals to retain stability and functioning if they are at risk of losing significant functionality or being admitted to a more restrictive service setting without these supports.
+              </p>
+              <p className="text-[#111517] text-base font-normal leading-normal">
+                The ARMHS services instruct, assist and support individuals in areas such as medication education and monitoring, basic social and living skills, mental illness symptom management, household management, and employment-related or community living transitions.
               </p>
             </div>
             <h3 className="text-[#111517] text-2xl font-bold leading-tight tracking-[-0.015em] mt-8 mb-4">
-              What is ARMHS?
+              Who is Eligible for ARMHS?
             </h3>
             <p className="text-[#111517] text-base font-normal leading-normal">
-              Adult Rehabilitative Mental Health Services (ARMHS) are a set of
-              services that help people with mental illness live more
-              independently. These services are provided by mental health
-              practitioners and include things like skill-building and support
-              for daily living. The goal of ARMHS is to help individuals with
-              mental illness develop the skills they need to live a fulfilling
-              and productive life.
+              To be eligible for ARMHS, individuals must meet the following criteria:
             </p>
+            <ul className="text-[#111517] text-base font-normal leading-normal list-disc pl-6 mt-2">
+              <li>Be 18 years old or older</li>
+              <li>Have a primary diagnosis of a mental illness as determined by a Diagnostic Assessment</li>
+              <li>Have a completed level of care assessment</li>
+              <li>Have a significant impairment in functioning in three or more areas of the Functional Assessment domains specified in statute</li>
+            </ul>
+            <p className="text-[#111517] text-base font-normal leading-normal mt-4">
+              All covered ARMHS services are provided face-to-face, except for community intervention. The documentation of activities is included in the covered service and must not be billed separately.
+            </p>
+            <h3 className="text-[#111517] text-2xl font-bold leading-tight tracking-[-0.015em] mt-8 mb-4">
+              Where Can ARMHS Be Provided?
+            </h3>
+            <p className="text-[#111517] text-base font-normal leading-normal">
+              ARMHS services may be provided in a variety of settings, including but not limited to:
+            </p>
+            <ul className="text-[#111517] text-base font-normal leading-normal list-disc pl-6 mt-2">
+              <li>A member's home</li>
+              <li>The home of a relative or significant other</li>
+              <li>A member's job site</li>
+              <li>The community, such as any of the following:
+                <ul className="list-disc pl-6">
+                  <li>Psychosocial clubhouse</li>
+                  <li>Drop-in center</li>
+                  <li>Social setting</li>
+                  <li>Classroom</li>
+                  <li>Other place in the community</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
