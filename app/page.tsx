@@ -90,9 +90,9 @@ export default function Home() {
               ARMHS services may be provided in a variety of settings, including but not limited to:
             </p>
             <ul className="text-[#111517] text-base font-normal leading-normal list-disc pl-6 mt-2">
-              <li>A member's home</li>
+              <li>A member&apos;s home</li>
               <li>The home of a relative or significant other</li>
-              <li>A member's job site</li>
+              <li>A member&apos;s job site</li>
               <li>The community, such as any of the following:
                 <ul className="list-disc pl-6">
                   <li>Psychosocial clubhouse</li>
