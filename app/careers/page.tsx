@@ -4,8 +4,8 @@ import Header from './../../components/Header';
 import Footer from './../../components/Footer';
 
 const FeaturedRole: React.FC<{ title: string; type: string; location: string; imageUrl: string }> = ({ title, type, location, imageUrl }) => (
-  <div className="flex items-stretch justify-between gap-4 rounded-xl p-4">
-    <div className="flex flex-[2_2_0px] flex-col gap-4">
+  <div className="flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-xl p-4">
+    <div className="flex flex-col gap-4 md:flex-[2_2_0px]">
       <div className="flex flex-col gap-1">
         <p className="text-[#647787] text-sm font-normal leading-normal">{location}</p>
         <p className="text-[#111517] text-base font-bold leading-tight">{title}</p>
@@ -16,20 +16,20 @@ const FeaturedRole: React.FC<{ title: string; type: string; location: string; im
       </button>
     </div>
     <div
-      className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+      className="w-full h-48 md:h-auto bg-center bg-no-repeat bg-cover rounded-xl md:flex-1"
       style={{ backgroundImage: `url("${imageUrl}")` }}
     />
   </div>
 );
 
 const AllRole: React.FC<{ title: string; location: string }> = ({ title, location }) => (
-  <div className="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-white px-4 py-4 sm:py-2 justify-between">
     <div className="flex flex-col justify-center">
       <p className="text-[#111517] text-base font-medium leading-normal line-clamp-1">{title}</p>
       <p className="text-[#647787] text-sm font-normal leading-normal line-clamp-2">{location}</p>
     </div>
-    <div className="shrink-0">
-      <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f0f2f4] text-[#111517] text-sm font-medium leading-normal w-fit">
+    <div className="shrink-0 w-full sm:w-auto">
+      <button className="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f0f2f4] text-[#111517] text-sm font-medium leading-normal">
         <span className="truncate">Apply Now</span>
       </button>
     </div>
@@ -48,27 +48,27 @@ const Home: React.FC = () => {
       <Header />
 
       <div className="layout-container flex h-full grow flex-col">
-        <div className="px-40 flex flex-1 justify-center py-5">
+        <div className="px-4 md:px-8 lg:px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div className="@container">
-              <div className="@[480px]:p-4">
+              <div className="p-0 sm:p-4">
                 <div
-                  className="flex min-h-[480px] flex-col bg-cover bg-center bg-no-repeat @[480px]:rounded-xl relative"
+                  className="flex min-h-[480px] flex-col bg-cover bg-center bg-no-repeat rounded-xl relative"
                   style={{
                     backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/046b988c-d5cf-4423-908c-2a93ee432b03.png")',
                   }}
                 >
-                  <div className="absolute bottom-8 left-8 max-w-xl text-left">
-                    <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] mb-4 @[480px]:text-5xl">
+                  <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 max-w-xl text-left p-4 sm:p-0">
+                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">
                       Make a Difference with Rayk Wellness Center
                     </h1>
-                    <h2 className="text-white text-sm font-normal leading-normal mb-6 @[480px]:text-base">
+                    <h2 className="text-white text-sm sm:text-base font-normal leading-normal mb-6">
                       Join our team of dedicated professionals committed to transforming lives through compassionate care. Your skills and passion can help create positive change in our community.
                     </h2>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
                       <button 
                         onClick={scrollToJobListings} 
-                        className="bg-[#2c90e2] text-white text-sm font-bold py-3 px-6 rounded-full hover:bg-[#2570b3] transition duration-300"
+                        className="bg-[#2c90e2] text-white text-sm font-bold py-3 px-6 rounded-full hover:bg-[#2570b3] transition duration-300 w-full sm:w-auto"
                       >
                         View Openings
                       </button>
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                         onClick={() => {
                           alert("Please email the completed form to Raykwellnesscenter@gmail.com");
                         }}
-                        className="bg-white text-[#2c90e2] text-sm font-bold py-3 px-6 rounded-full hover:bg-[#f0f2f4] transition duration-300"
+                        className="bg-white text-[#2c90e2] text-sm font-bold py-3 px-6 rounded-full hover:bg-[#f0f2f4] transition duration-300 text-center w-full sm:w-auto"
                       >
                         Download Application Form
                       </a>

@@ -5,9 +5,11 @@ import Footer from './../../components/Footer';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
       <Header />
-      <ContactForm />
+      <main className="flex-grow flex flex-col items-center justify-center pt-16">
+        <ContactForm />
+      </main>
       <Footer />
     </div>
   );
