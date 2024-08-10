@@ -24,7 +24,7 @@ const Header: React.FC = () => {
   const navItems = [
     { text: "Home", href: "/" },
     { text: "Services", href: "/services" },
-    { text: "Referral Forms", href: "/referral-forms" },
+    // { text: "Referral Forms", href: "/referral-forms" },
     { text: "Careers", href: "/careers" },
     { text: "Contact", href: "/contact" },
   ];
@@ -60,10 +60,12 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="flex items-center gap-4">
+          <button  className="bg-[#2c90e2] text-white text-sm font-bold py-3 px-6 rounded-full hover:bg-[#2570b3] transition duration-300">         
             <a href="tel:+16513741620" className={`hidden sm:flex items-center gap-2 ${isScrolled ? 'text-[#111517]' : 'text-white'} hover:text-[#2c90e2] transition-colors`}>
               <PhoneCall size={18} />
               <span className="text-sm font-medium">(763) 439-1742</span>
             </a>
+            </button>
             <button className={`p-2 rounded-full ${isScrolled ? 'text-[#111517] hover:bg-gray-100' : 'text-white hover:bg-white/20'} transition-colors`}>
               <Search size={20} />
             </button>
